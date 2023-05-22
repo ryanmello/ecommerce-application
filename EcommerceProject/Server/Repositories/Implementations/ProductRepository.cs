@@ -43,6 +43,7 @@ namespace EcommerceProject.Server.Repositories.Implementations
                 response.Success = false;
                 response.Message = "Product is null";
                 response.CssClass = "warning";
+                response.SingleProduct = null;
                 return response;
             }
         }
