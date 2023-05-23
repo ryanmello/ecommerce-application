@@ -23,7 +23,7 @@ namespace EcommerceProject.Server.Controllers
         }
 
         // get all products
-        [HttpGet("get-products")]
+        [HttpGet]
         public async Task<ActionResult<ServiceModel>> GetProducts()
         {
             return Ok(await productRepository.GetProducts());
