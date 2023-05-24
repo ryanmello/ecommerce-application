@@ -21,7 +21,7 @@ namespace EcommerceProject.Client.Services.ImplementationServices
 
         public async Task<ServiceModel> GetProduct(int productId)
         {
-            var result = await httpClient.GetAsync($"api/product/get-product/(productId)");
+            var result = await httpClient.GetAsync($"api/product/get-product/{productId}");
             return await result.Content.ReadFromJsonAsync<ServiceModel>();
         }
 

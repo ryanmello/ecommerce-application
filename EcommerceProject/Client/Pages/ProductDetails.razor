@@ -1,0 +1,32 @@
+﻿@page "/product-details/{id:int}"
+@using EcommerceProject.Client.Services.InterfaceServices;
+@using EcommerceProject.Shared.DataTransferModels;
+
+@inject IProductService productService
+
+@if (serviceModel.SingleProduct != null)
+{
+	<h1>Hello</h1>
+}
+else
+{
+	<h1>Hellooooooooooooo</h1>
+}
+
+@code {
+	[Parameter]
+	public int Id { get; set; }
+	ServiceModel serviceModel = new ServiceModel();
+
+	protected override async Task OnInitializedAsync()
+	{
+		await GetProduct();
+	}
+
+	private async Task GetProduct()
+	{
+		serviceModel = await productService.GetProduct(Id);
+	}
+
+
+}
