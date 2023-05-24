@@ -8,5 +8,7 @@ namespace EcommerceProject.Client.Services.InterfaceServices
         public Task<ServiceModel> AddProduct(Product newProduct);
         public Task<ServiceModel> GetProducts();
         public Task<ServiceModel> GetProduct(int productId);
+        public Task<ServiceModel> UpdateProduct(int productId, Product newProduct);
+        public Task<ServiceModel> DeleteProduct(int productId);
     }
 }

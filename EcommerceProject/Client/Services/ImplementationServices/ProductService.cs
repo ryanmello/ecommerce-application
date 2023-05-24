@@ -19,6 +19,11 @@ namespace EcommerceProject.Client.Services.ImplementationServices
             return await product.Content.ReadFromJsonAsync<ServiceModel>();
         }
 
+        public Task<ServiceModel> DeleteProduct(int productId)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<ServiceModel> GetProduct(int productId)
         {
             var result = await httpClient.GetAsync($"api/product/get-product/{productId}");
@@ -29,6 +34,11 @@ namespace EcommerceProject.Client.Services.ImplementationServices
         {
             var result = await httpClient.GetAsync("api/product");
             return await result.Content.ReadFromJsonAsync<ServiceModel>();
+        }
+
+        public Task<ServiceModel> UpdateProduct(int productId, Product newProduct)
+        {
+            throw new NotImplementedException();
         }
     }
 }
